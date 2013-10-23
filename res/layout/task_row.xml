@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="54dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/cross_road"
+                    android:padding="0px">
+        <TextView  android:layout_width="match_parent"
+                   android:layout_height="19dp"
+                   android:background="@drawable/circle_bottom"
+                   android:layout_alignParentTop="true"
+                   android:gravity="center|top"
+                   android:id="@+id/date_bottom_part"
+                   android:visibility="gone"
+                   android:layout_marginRight="-1px"
+                   android:layout_marginLeft="-1px"
+                   android:textSize="9dp"
+                   android:textColor="@android:color/white"
+                   android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#0078d0"
+                  android:id="@+id/creation_date"
+                  android:singleLine="true"
+                  android:textSize="9sp"
+                  android:layout_marginTop="-10dp"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:paddingLeft="2px"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/task_row_bg"
+                    android:id="@+id/task_details_container">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_centerVertical="true"
+                      android:layout_toLeftOf="@+id/th"
+                      android:paddingLeft="10dp">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/task_title"
+                      android:textColor="@android:color/black"
+                      android:textSize="20sp"
+                      android:singleLine="true"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/task_description"
+                      android:textColor="@android:color/darker_gray"
+                      android:textSize="15sp"
+                      android:singleLine="true"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@id/th"
+                      android:background="@drawable/timer_container_bg"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true"
+                      android:layout_margin="5dp"
+                      android:gravity="center_vertical">
+            <RelativeLayout android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center">
+                <ImageView android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:src="@drawable/start_selector"
+                           android:visibility="invisible"
+                           android:id="@+id/task_button_start"
+                           android:layout_centerInParent="true"/>
+                <ImageView android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:src="@drawable/pause_selector"
+                           android:visibility="invisible"
+                           android:id="@+id/task_button_pause"
+                           android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <View android:layout_width="1px"
+                  android:layout_height="40dp"
+                  android:background="@android:color/black"/>
+            <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp"
+                    android:id="@+id/task_time_spend"
+                    android:singleLine="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
